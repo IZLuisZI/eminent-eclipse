@@ -1,0 +1,96 @@
+---
+import Logo from "../../public/images/logo.astro";
+import ButtonColor from "./ButtonColor.astro";
+import HamMenu from "../../public/images/icon-hamburger.astro";
+const HEADERSECTIONS = [
+  {
+    name: "Home",
+    link: "/",
+  },
+  {
+    name: "About",
+    link: "/about",
+  },
+  {
+    name: "Contact",
+    link: "/contact",
+  },
+  {
+    name: "Blog",
+    link: "/blog",
+  },
+  {
+    name: "Projects",
+    link: "/projects",
+  },
+];
+---
+
+<header class="relative z-50">
+  <div
+    class="mx-[20px] relative md:mx-[40px] lg:mx-[70px] 2xl:mx-[200px] flex items-center justify-between"
+  >
+    <div class="h-20 grid place-items-center">
+      <Logo />
+    </div>
+    <nav id="navigation" class="md:flex items-center hidden">
+      <ul
+        class="absolute shadow-2xl w-full bg-white my-3 left-0 items-center top-full flex flex-col md:flex-row md:text-gray-400 md:relative md:shadow-none
+          md:w-fit md:bg-transparent"
+      >
+        {
+          HEADERSECTIONS.map(({ name, link }) => (
+            <li class="relative header after:bg-gradient-to-r after:from-blue-400 after:to-green-400">
+              <a
+                class="px-4 h-20 hover:text-slate-800  flex items-center"
+                href={link}
+              >
+                {name}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+    <div class="block md:hidden px-4 h-f" id="menu">
+      <HamMenu />
+    </div>
+    <span class="hidden md:block"> <ButtonColor text="Request Invite" /></span>
+  </div>
+  <style>
+    .header:hover::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      transition: all 300ms ease-in-out;
+    }
+
+    .animations {
+      animation: fromTop 0.3s ease-in-out forwards;
+    }
+
+    @keyframes fromTop {
+      from {
+        transform: scale(0);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    * {
+      transition: all 0.5s ease-in-out;
+    }
+  </style>
+</header>
+
+<script>
+  const menu = document.getElementById("menu");
+  const navigation = document.getElementById("navigation");
+
+  menu.addEventListener("click", () => {
+    navigation.classList.toggle("hidden");
+  });
+</script>

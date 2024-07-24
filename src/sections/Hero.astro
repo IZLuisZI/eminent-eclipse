@@ -1,0 +1,40 @@
+---
+import Header from "@components/Header.astro";
+import HeroImage from "../../public/images/bg-intro-desktop.astro";
+import ButtonColor from "@components/ButtonColor.astro";
+import Phones from "../../public/images/image-mockups.png";
+---
+
+<section class="relative overflow-x-clip">
+  <div class="z-50 relative bg-white shadow-md">
+    <Header />
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="mx-[20px] md:mx-[40px] lg:mx-[70px] 2xl:mx-[200px]">
+      <div
+        class="py-36 md:py-60 flex gap-8 flex-col items-center text-center md:items-start md:text-left"
+      >
+        <h1 class="text-5xl md:text-6xl text-slate-800">
+          Next generation digital banking
+        </h1>
+        <p class="text-gray-400">
+          Take your financial life online. Your Easybank account eill be a one
+          stop hop for spending, saving budgeting, investion, and much more.
+        </p>
+        <div class="w-fit">
+          <ButtonColor text="Request Invite" />
+        </div>
+      </div>
+    </div>
+    <div class="relative py-36 md:py-0 -order-1 md:order-1">
+      <div class="absolute -right-1/2 -top-[200%] md:-top-1/4 md:left-0">
+        <HeroImage />
+      </div>
+      <div
+        class="absolute -top-[110%] sm:-top-[160%] md:-top-[10%] md:-right-[10%]"
+      >
+        <img src="/images/image-mockups.png" alt="Phones" />
+      </div>
+    </div>
+  </div>
+</section>

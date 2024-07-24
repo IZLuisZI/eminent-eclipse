@@ -1,0 +1,70 @@
+---
+import ButtonColor from "@components/ButtonColor.astro";
+import Logo from "@images/logo.astro";
+import Youtube from "@images/icon-youtube.astro";
+import Twitter from "@images/icon-twitter.astro";
+import Facebook from "@images/icon-facebook.astro";
+import Pinterest from "@images/icon-pinterest.astro";
+import Instagram from "@images/icon-instagram.astro";
+
+const FOOTERSECTIONS = {
+  ABOUT: [
+    { name: "About us", link: "#" },
+    { name: "Contact", link: "#" },
+    { name: "Blog", link: "#" },
+  ],
+  SUPPORT: [
+    { name: "Careers", link: "#" },
+    { name: "Support", link: "#" },
+    { name: "Privacy Policy", link: "#" },
+  ],
+};
+---
+
+<footer class="bg-slate-800 text-white py-20">
+  <div
+    class="mx-[20px] md:mx-[40px] lg:mx-[70px] 2xl:mx-[200px] flex-col md:flex-row flex justify-between gap-8 items-center"
+  >
+    <div class="flex flex-col md:flex-row gap-8 text-center md:gap-20">
+      <div>
+        <Logo class="w-20" />
+        <div>
+          <span class="flex gap-3 mt-16">
+            <Facebook class="size-6" />
+            <Twitter class="size-6" />
+            <Youtube class="size-6" />
+            <Pinterest class="size-6" />
+            <Instagram class="size-6" />
+          </span>
+        </div>
+      </div>
+      <div>
+        <ul class="flex flex-col gap-4">
+          {
+            FOOTERSECTIONS.ABOUT.map(({ name, link }) => (
+              <li class="hover:underline hover:text-green-500">
+                <a href={link}>{name}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div><div>
+        <ul class="flex flex-col gap-4">
+          {
+            FOOTERSECTIONS.SUPPORT.map(({ name, link }) => (
+              <li class="hover:underline hover:text-green-500">
+                <a href={link}>{name}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+    <div class="flex flex-col h-full justify-between">
+      <ButtonColor text="Request Invite" />
+      <p class="mt-16 text-slate-500">
+        &copy Luis Soriano. All rights reserved
+      </p>
+    </div>
+  </div>
+</footer>
