@@ -1,54 +1,29 @@
-# Astro Starter Kit: Basics
+# Bank Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to the Bank landing page! This is the central hub for all things related to our banking services. Whether you're a new customer or an existing one, this page will provide you with all the information you need to manage your finances effectively.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Features
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+A hero section
+A Features section
+A News section
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Getting Started
 
-## 🚀 Project Structure
+To get started with our banking services, follow these simple steps:
 
-Inside of your Astro project, you'll see the following folders and files:
+1. Sign up for an account by clicking on the "Register" button on the top right corner of the page.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+2. Once registered, log in to your account using your credentials.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+3. Explore the various features available on the landing page, such as account management, loan services, and customer support.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+4. If you have any questions or need assistance, don't hesitate to reach out to our customer support team.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Contributing
 
-## 🧞 Commands
+We welcome contributions from the community to enhance our banking services. If you have any suggestions or would like to report a bug, please open an issue on our GitHub repository.
 
-All commands are run from the root of the project, from a terminal:
+## License
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
